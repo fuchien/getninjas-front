@@ -1,10 +1,10 @@
-
+import renderForm from './form/form';
 
 const getFieldsData = async (endpoint) => {
     try {
         const response = await fetch(endpoint);
         const data = await response.json()
-        console.log(data)
+        renderForm(data)
     } catch (err) {
         console.log(`Erro ao pegar os dados!`, err)
     }
