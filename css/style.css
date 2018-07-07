@@ -30,6 +30,16 @@
     margin: auto;
 }
 
+.container .form .form__request h4 {
+    margin-bottom: 2px;
+}
+
+.container .form .form__request select,
+.container .form .form__request textarea {
+    min-width: 100%;
+    padding: 0;
+}
+
 @media (min-width: 768px) {
     .container {
         width: 60vw;
