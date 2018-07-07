@@ -8,6 +8,8 @@ const createForm = (data) => {
             </div>
         `
     )
+
+    return form
 }
 
 export default function renderForm(data, element) {

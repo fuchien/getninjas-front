@@ -1,9 +1,10 @@
 
 export default function renderRequestFields(requestFields) {
-    console.log(requestFields)
-    return requestFields.map(requestField => 
-        `<div>
+    let fields = requestFields.map(requestField => {
+        return `<div>
             <h4>${requestField.name}</h4>
         </div>`
-    ).join('');
+    }).join('');
+
+    return fields
 }
