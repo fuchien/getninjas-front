@@ -11,7 +11,7 @@ const getFieldsData = async (endpoint) => {
         renderHeader(headerElement);
         renderForm(data, formElement);
     } catch (err) {
-        console.log(`Erro ao pegar os dados!`, err)
+        console.log(`Erro ao pegar os dados da API!`, err)
     }
 }
 
