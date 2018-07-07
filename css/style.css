@@ -1,16 +1,14 @@
 
 .container {
-    width: 80vw;
+    width: 70vw;
     min-height: 80vh;
-    margin: 12vh auto 0;
-    display: flex;
-    justify-content: flex-start;
+    margin: 10vh auto 0;
     border: 1px solid rgb(173, 168, 168);
     border-radius: 10px;
 }
 
 .container .header {
-    min-width: 80%;
+    width: 80%;
     height: 100px;
     margin: 0 auto;
     color: rgb(67, 145, 239);
@@ -19,10 +17,18 @@
     border-bottom: 1px solid rgb(217, 233, 252);
 }
 
-.container .header h1 {
-    margin-bottom: 5px;
-}
-
 .container .header h4 {
     margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 40vw;
+    }
 }
