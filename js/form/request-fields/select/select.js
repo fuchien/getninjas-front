@@ -8,6 +8,7 @@ export default function createSelects(selects) {
     return (
         `
             <select>
+                <option value="" disabled selected>Selecione uma opção!</option>
                 ${options}
             </select>
         `
