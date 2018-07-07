@@ -1,6 +1,15 @@
 export default function createSelects(selects) {
-    console.log(selects)
-    return selects.map(select =>
-        `<option value="${select}">${select}</option>`
+    
+    let options = selects.map(select =>
+        `
+            <option value="${select}">${select}</option>
+        `
     ).join('');
+    return (
+        `
+            <select>
+                ${options}
+            </select>
+        `
+    )
 }

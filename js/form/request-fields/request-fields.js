@@ -9,7 +9,7 @@ export default function renderRequestFields(requestFields) {
 
         return `<div>
             <h4>${requestField.name}</h4>
-            <select>${createSelects(selects)}</select>
+            ${selects.length ? createSelects(selects) : ''}
         </div>`
     }).join('');
 
