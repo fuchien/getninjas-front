@@ -2,7 +2,7 @@ export default function createTextArea(placeholder) {
     
     return (
         `
-            <textarea rows="3" placeholder="${placeholder}"></textarea>
+            <textarea rows="4" placeholder="${placeholder}"></textarea>
         `
     )
 }

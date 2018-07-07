@@ -38,6 +38,19 @@
 .container .form .form__request textarea {
     min-width: 100%;
     padding: 0;
+    background-color: rgb(240, 244, 250);
+    border: 1px solid rgb(154, 195, 245);
+}
+
+.container .form .form__request select {
+    height: 30px;
+}
+
+.container .form .form__request textarea {
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-top: 7px;
+    box-sizing: border-box; 
 }
 
 @media (min-width: 768px) {
