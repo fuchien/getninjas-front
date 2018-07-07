@@ -14,7 +14,7 @@
 }
 
 .container .header {
-    height: 100px;
+    min-height: 100px;
     margin: 0 auto;
     color: rgb(67, 145, 239);
     text-align: center;
