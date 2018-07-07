@@ -1,4 +1,5 @@
 import createSelects from './select/select';
+import createTextArea from './text-area/text-area';
 
 export default function renderRequestFields(requestFields) {
     let fields = requestFields.map(requestField => {
@@ -9,7 +10,7 @@ export default function renderRequestFields(requestFields) {
 
         return `<div>
             <h4>${requestField.name}</h4>
-            ${selects.length ? createSelects(selects) : ''}
+            ${selects.length ? createSelects(selects) : createTextArea(requestField.placeholder)}
         </div>`
     }).join('');
 
