@@ -80,6 +80,10 @@
   color: rgb(106, 125, 136);
 }
 
+.container .form .form__tabs .form__tab .active {
+  background-color: #fff;
+}
+
 @media (min-width: 768px) {
     .container {
         width: 60vw;

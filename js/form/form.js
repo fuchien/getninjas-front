@@ -1,5 +1,5 @@
 import renderRequestFields from './request-fields/request-fields';
-import renderButton from '../form/button/button';
+import renderButton, { buttonCliked } from '../form/button/button';
 import renderTabs from './tabs/tabs';
 
 const EventEmitter = require('events');
@@ -10,15 +10,16 @@ const createForm = (data) => {
     emitter.on(`searchProfessional`, () => {
         console.log(`CLICOU searchProfessional`)
         let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById('users_fields').style.display = "block";
+        // tabcontent = document.getElementsByClassName("tabcontent");
+        // for (i = 0; i < tabcontent.length; i++) {
+        //     tabcontent[i].style.display = "none";
+        // }
+        // tablinks = document.getElementsByClassName("tablinks");
+        // for (i = 0; i < tablinks.length; i++) {
+        //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+        // }
+        // document.getElementById('users_fields').style.display = "block";
+        // document.getElementById('1').className += " active"
     })
 
     let tabs = [`1. Seu pedido`, `2. Seus dados`];

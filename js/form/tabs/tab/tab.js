@@ -1,9 +1,9 @@
 
 
-export default function renderTab (message) {
+export default function renderTab (message, index) {
     return (
         `
-            <button class="form__tab">${message}</button>
+            <button id="${index}" class="form__tab tablinks">${message}</button>
         `
     )
 }

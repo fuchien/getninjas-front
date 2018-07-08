@@ -1,15 +1,16 @@
 
 
+const buttonCliked = (msg) => {
+    alert(msg)
+}
+
+window.buttonCliked = buttonCliked
 
 export default function renderButton(message, emitter, emitterName) {
 
-    const buttonClicked = () => {
-        emitter.emit(emitterName)
-    }
-
     return (
         `
-            <button onclick="${() => buttonClicked()}">${message}</button>
+            <button onClick="buttonCliked('haha')">${message}</button>
         `
     )
 }
