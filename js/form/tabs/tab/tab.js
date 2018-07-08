@@ -1,12 +1,12 @@
 
 
-export default function renderTab (message, index) {
+export default function renderTab (formTab) {
 
-    let active = index === 0 ? 'active' : '';
+    let active = formTab.index === 0 ? 'active' : '';
 
     return (
         `
-            <button id="${index}" class="form__tab tablinks ${active}" disabled>${message}</button>
+            <button id="${formTab.tab.tabContent}" class="form__tab tablinks ${active}" disabled>${formTab.tab.tabName}</button>
         `
     )
 }

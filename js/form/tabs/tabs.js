@@ -5,7 +5,7 @@ export default function renderTabs(emitter, tabs) {
     
     return tabs.map((tab, index) => 
         `
-            ${renderTab(tab, index)}
+            ${renderTab({tab, index})}
         `
     ).join('')
 
