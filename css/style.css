@@ -53,6 +53,14 @@
     box-sizing: border-box; 
 }
 
+.container .form .form__request button {
+  min-width: 100%;
+  background-color: rgb(67, 145, 239);
+  text-transform: uppercase;
+  text-align: center;
+  height: 100px;
+}
+
 @media (min-width: 768px) {
     .container {
         width: 60vw;
