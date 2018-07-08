@@ -1,4 +1,4 @@
-
+import renderRequiredField from '../../required-field/required-field';
 
 export default function renderUserField(user) {
 
@@ -12,7 +12,8 @@ export default function renderUserField(user) {
         <div class="form__group">
             <label for="${user.userField.name}">${user.userField.label}</label>
             <input type="${inputType}" id="${user.userField.name}"style="width: ${user.index === 0 || user.index === 3 ? '40%' : '100%'}"
-                class="form__input" placeholder="${user.userField.placeholder}" required>
+                class="form__input" placeholder="${user.userField.placeholder}" required="${user.userField.required}">
+            ${user.userField.required ? renderRequiredField() : ''}
         </div>
         `
     )

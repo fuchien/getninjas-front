@@ -10,7 +10,7 @@ export default function renderRequestFields(requestFields) {
 
         return `<div>
             <h4>${requestField.name}</h4>
-            ${selects.length ? createSelects(selects) : createTextArea(requestField.placeholder)}
+            ${selects.length ? createSelects({selects, required: requestField.required}) : createTextArea(requestField.placeholder)}
 
         </div>`
     }).join('');

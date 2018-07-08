@@ -95,6 +95,13 @@
   box-sizing: border-box;
 }
 
+.container .form .form__request .form__select:required + .form__required::before,
+.container .form .form__users .form__group .form__input:required + .form__required::before {
+    content: 'Este campo é requerido';
+    color: rgb(205, 90, 75);
+    font-size: 12px;
+}
+
 .container .form .form__tabs {
   display: flex;
   background-color: rgb(231, 231, 231);
