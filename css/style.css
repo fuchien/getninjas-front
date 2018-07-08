@@ -74,6 +74,7 @@
   padding: 0;
   border: 0;
   border-bottom-left-radius: 10px;
+  text-transform: initial;
   border-bottom-right-radius: 10px;
   background-color: rgb(231, 231, 231);
   color: rgb(106, 125, 136);

@@ -3,13 +3,13 @@
 
 export default function renderButton(message, emitter, emitterName) {
 
-    onclick = () => {
+    const buttonClicked = () => {
         emitter.emit(emitterName)
     }
 
     return (
         `
-            <button onclick="${() => onclick()}">${message}</button>
+            <button onclick="${() => buttonClicked()}">${message}</button>
         `
     )
 }

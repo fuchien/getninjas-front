@@ -9,15 +9,28 @@ const createForm = (data) => {
 
     emitter.on(`searchProfessional`, () => {
         console.log(`CLICOU searchProfessional`)
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById('users_fields').style.display = "block";
     })
 
     let tabs = [`1. Seu pedido`, `2. Seus dados`];
     
     let form = (
         `
-            <div class="form__request">
+            <div id="request_fields" class="form__request tabcontent">
                 ${renderRequestFields(data._embedded.request_fields)}
                 ${renderButton(`BUSCAR PROFISSIONAIS`, emitter, `searchProfessional`)}
+            </div>
+            <div id="users_fields" class="form__users tabcontent">
+                <p>TESTE</p>
             </div>
             <div class="form__tabs">${renderTabs(emitter, tabs)}</div>
         `
