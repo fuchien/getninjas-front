@@ -76,6 +76,20 @@
   border-radius: 4px;
 }
 
+.container .form .form__users .form-group {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.container .form .form__users .form-group label {
+
+}
+
+.container .form .form__users .form-group input:placeholder-shown + label {
+
+}
+
 .container .form .form__tabs {
   display: flex;
   background-color: rgb(231, 231, 231);

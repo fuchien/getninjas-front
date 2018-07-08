@@ -1,11 +1,11 @@
-
+import renderUserField from './user-field/user-field';
 
 export default function renderUserFields(userFields) {
     let fields = userFields.map(userField => {
 
         return (
             `
-                <p>${userField.name}</p>
+                ${renderUserField(userField)}
             `
         )
     }).join('');
