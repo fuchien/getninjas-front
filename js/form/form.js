@@ -1,11 +1,15 @@
+
+import renderButton from '../form/button/button';
 import renderRequestFields from './request-fields/request-fields';
-import renderButton, { buttonCliked } from '../form/button/button';
 import renderTabs from './tabs/tabs';
+import renderUserFields from './users-fields/users-fields';
 
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 
 const createForm = (data) => {
+
+    let tabs = [`1. Seu pedido`, `2. Seus dados`];
 
     emitter.on(`searchProfessional`, (field, fieldNumber) => {
         console.log(`CLICOU searchProfessional`)
@@ -21,8 +25,6 @@ const createForm = (data) => {
         document.getElementById(field).className = document.getElementById(field).className.replace(" none", " block")
         document.getElementById(fieldNumber).className += " active"
     })
-
-    let tabs = [`1. Seu pedido`, `2. Seus dados`];
     
     let form = (
         `
@@ -31,7 +33,7 @@ const createForm = (data) => {
                 ${renderButton(`BUSCAR PROFISSIONAIS`, emitter, `searchProfessional`, `users_fields`, 1)}
             </div>
             <div id="users_fields" class="form__users none tabcontent">
-                <p>TESTE</p>
+                ${renderUserFields(data._embedded.user_fields)}
             </div>
             <div class="form__tabs">${renderTabs(emitter, tabs)}</div>
         `
