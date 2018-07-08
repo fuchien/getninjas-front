@@ -7,6 +7,6 @@ export default function renderTabs(emitter, tabs) {
         `
             ${renderTab({tab, index})}
         `
-    ).join('')
+    ).join('');
 
 }

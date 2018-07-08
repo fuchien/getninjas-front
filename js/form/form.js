@@ -1,6 +1,5 @@
 
 import { renderButtonSearch, renderButtonFinished } from './button/button';
-// import Button from '../form/button/button';
 import renderRequestFields from './request-fields/request-fields';
 import renderTabs from './tabs/tabs';
 import renderUserFields from './users-fields/users-fields';
@@ -16,22 +15,22 @@ const createForm = (data) => {
     ];
 
     emitter.on(`searchProfessional`, (fieldData) => {
-        console.log(`CLICOU searchProfessional`, fieldData)
+        alert('Buscando profissionais...');
         let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].className = tabcontent[i].className.replace(" block", " none")
+            tabcontent[i].className = tabcontent[i].className.replace(" block", " none");
         }
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(fieldData.openFieldTab).className = document.getElementById(fieldData.openFieldTab).className.replace(" none", " block")
-        document.getElementById(fieldData.openFieldContent).className += " active"
+        document.getElementById(fieldData.openFieldTab).className = document.getElementById(fieldData.openFieldTab).className.replace(" none", " block");
+        document.getElementById(fieldData.openFieldContent).className += " active";
     })
 
     emitter.on(`finished`, (fieldData) => {
-        console.log(`CLICOU finished`)
+        alert('Finalizando...');
     })
     
     let form = (
@@ -52,7 +51,7 @@ const createForm = (data) => {
         `
     )
 
-    return form
+    return form;
 }
 
 export default function renderForm(data, element) {

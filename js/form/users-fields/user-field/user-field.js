@@ -5,7 +5,7 @@ export default function renderUserField(user) {
     let inputType = user.userField.type.toLowerCase() === 'email' ? 'email' :
                     user.userField.type.toLowerCase() === 'cep' ? 'number' :
                     user.userField.type.toLowerCase() === 'phone' ? 'number' :
-                    'text'
+                    'text';
 
     return (
         `

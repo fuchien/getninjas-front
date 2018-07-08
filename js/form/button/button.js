@@ -3,10 +3,10 @@
 export function renderButtonFinished(options) {
 
     const buttonFinished = () => {
-        options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent})
+        options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent});
     }
     
-    window.buttonFinished = buttonFinished
+    window.buttonFinished = buttonFinished;
 
     return (
         `
@@ -19,10 +19,10 @@ export function renderButtonFinished(options) {
 export function renderButtonSearch(options) {
 
     const buttonSearch = () => {
-        options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent})
+        options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent});
     }
     
-    window.buttonSearch = buttonSearch
+    window.buttonSearch = buttonSearch;
 
     return (
         `
