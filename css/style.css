@@ -93,7 +93,6 @@
   transition-property: box-shadow;
   margin: 5px 0;
   box-sizing: border-box;
-  min-width: 100%;
 }
 
 .container .form .form__users .form__group input:placeholder-shown + label {
