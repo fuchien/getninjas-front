@@ -1,9 +1,9 @@
 
 
-export default function renderButton(message, emitter, emitterName) {
+export default function renderButton(message, emitter, emitterName, field, fieldNumber) {
 
     const buttonCliked = () => {
-        emitter.emit(emitterName)
+        emitter.emit(emitterName, field, fieldNumber)
     }
     
     window.buttonCliked = buttonCliked

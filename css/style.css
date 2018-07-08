@@ -26,6 +26,14 @@
     margin-top: 0;
 }
 
+.container .form .none {
+  display: none;
+}
+
+.container .form .block {
+  display: block;
+}
+
 .container .form .form__request {
     margin: auto;
 }

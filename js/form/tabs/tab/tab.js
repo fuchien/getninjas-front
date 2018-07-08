@@ -6,7 +6,7 @@ export default function renderTab (message, index) {
 
     return (
         `
-            <button id="${index}" class="form__tab tablinks ${active}">${message}</button>
+            <button id="${index}" class="form__tab tablinks ${active}" disabled>${message}</button>
         `
     )
 }
