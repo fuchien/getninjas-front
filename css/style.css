@@ -9,7 +9,8 @@
 }
 
 .container .header,
-.container .form .form__request {
+.container .form .form__request,
+.container .form .form__users {
     width: 80%;
 }
 
@@ -34,7 +35,8 @@
   display: block;
 }
 
-.container .form .form__request {
+.container .form .form__request,
+.container .form .form__users {
     margin: auto;
 }
 
@@ -46,19 +48,17 @@
 .container .form .form__request textarea {
     min-width: 100%;
     padding: 0;
-    background-color: rgb(240, 244, 250);
-    border: 1px solid rgb(154, 195, 245);
+    background-color: #eff4fa;
+    border: 1px solid rgba(19,147,246,0.5);
+    border-radius: 6px;
+    padding: 13px 11px;
+    box-sizing: border-box; 
+    font-size: 14px;
+    transition-duration: .18s;
 }
 
 .container .form .form__request select {
-    height: 30px;
-}
-
-.container .form .form__request textarea {
-    border-radius: 5px;
-    padding-left: 7px;
-    padding-top: 7px;
-    box-sizing: border-box; 
+  height: 45px;
 }
 
 .container .form .form__request button,
@@ -76,17 +76,27 @@
   border-radius: 4px;
 }
 
-.container .form .form__users .form-group {
+.container .form .form__users .form__group {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+  margin-top: 10px;
 }
 
-.container .form .form__users .form-group label {
-
+.container .form .form__users .form__group .form__input {
+  background-color: #eff4fa;
+  border: 1px solid rgba(19,147,246,0.5);
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 13px 11px;
+  transition-duration: .18s;
+  transition-property: box-shadow;
+  margin: 5px 0;
+  box-sizing: border-box;
+  min-width: 100%;
 }
 
-.container .form .form__users .form-group input:placeholder-shown + label {
+.container .form .form__users .form__group input:placeholder-shown + label {
 
 }
 
