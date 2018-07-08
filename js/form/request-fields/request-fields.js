@@ -11,6 +11,7 @@ export default function renderRequestFields(requestFields) {
         return `<div>
             <h4>${requestField.name}</h4>
             ${selects.length ? createSelects(selects) : createTextArea(requestField.placeholder)}
+
         </div>`
     }).join('');
 
