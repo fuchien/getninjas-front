@@ -1,5 +1,5 @@
 import renderRequestFields from './request-fields/request-fields';
-import createButton from '../form/button/button';
+import renderButton from '../form/button/button';
 
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
@@ -14,7 +14,7 @@ const createForm = (data) => {
         `
             <div class="form__request">
                 ${renderRequestFields(data._embedded.request_fields)}
-                ${createButton(`BUSCAR PROFISSIONAIS`, emitter, `searchProfessional`)}
+                ${renderButton(`BUSCAR PROFISSIONAIS`, emitter, `searchProfessional`)}
             </div>
         `
     )

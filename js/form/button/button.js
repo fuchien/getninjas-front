@@ -1,7 +1,7 @@
 
 
 
-export default function createButton(message, emitter, emitterName) {
+export default function renderButton(message, emitter, emitterName) {
 
     onclick = () => {
         emitter.emit(emitterName)
