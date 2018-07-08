@@ -1,39 +1,33 @@
 
 
-export default function renderButton(options) {
+export function renderButtonFinished(options) {
 
-    console.log(options)
-    const buttonCliked = () => {
+    const buttonFinished = () => {
         options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent})
     }
     
-    window.buttonCliked = buttonCliked
+    window.buttonFinished = buttonFinished
 
     return (
         `
-            <button onClick="buttonCliked()">${options.message}</button>
+            <button onClick="buttonFinished()">${options.message}</button>
         `
     )
 }
 
-// export default class Button {
 
-//      canOpen = false;
+export function renderButtonSearch(options) {
 
-//     renderButton(options) {
-
-//         console.log(options)
-//         const buttonCliked = () => {
-//             options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent})
-//         }
-        
-//         window.buttonCliked = buttonCliked
+    const buttonSearch = () => {
+        options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent})
+    }
     
-//         return (
-//             `
-//                 <button onClick="buttonCliked()">${options.message}</button>
-//             `
-//         )
-//     }
+    window.buttonSearch = buttonSearch
 
-// }
+    return (
+        `
+            <button onClick="buttonSearch()">${options.message}</button>
+        `
+    )
+}
+
