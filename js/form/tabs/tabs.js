@@ -1,9 +1,12 @@
+import renderTab from './tab/tab';
 
 
-const createTabs = () => {
+export default function renderTabs(emitter, tabs) {
     
-}
-
-export default function renderTabs() {
+    return tabs.map(tab => 
+        `
+            ${renderTab(tab)}
+        `
+    )
 
 }
