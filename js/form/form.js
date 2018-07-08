@@ -18,8 +18,8 @@ const createForm = (data) => {
             <div class="form__request">
                 ${renderRequestFields(data._embedded.request_fields)}
                 ${renderButton(`BUSCAR PROFISSIONAIS`, emitter, `searchProfessional`)}
-                <div class="form__tabs">${renderTabs(emitter, tabs)}</div>
             </div>
+            <div class="form__tabs">${renderTabs(emitter, tabs)}</div>
         `
     )
 
