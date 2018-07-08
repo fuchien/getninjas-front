@@ -3,13 +3,13 @@
 
 export default function createButton(message, emitter, emitterName) {
 
-    document.addEventListener('click', function () {
+    onclick = () => {
         emitter.emit(emitterName)
-    });
+    }
 
     return (
         `
-            <button>${message}</button>
+            <button onclick="${onclick()}">${message}</button>
         `
     )
 }
