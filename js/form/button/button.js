@@ -9,7 +9,7 @@ export default function createButton(message, emitter, emitterName) {
 
     return (
         `
-            <button onclick="${onclick()}">${message}</button>
+            <button onclick="${() => onclick()}">${message}</button>
         `
     )
 }
