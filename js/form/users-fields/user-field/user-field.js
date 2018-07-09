@@ -1,18 +1,25 @@
 import renderRequiredField from '../../required-field/required-field';
-import { addCefMask } from '../../form-mask/form-mask';
+import { addCefMask, addCelMask } from '../../form-mask/form-mask';
 
 export default function renderUserField(user) {
 
     let inputType = user.userField.type.toLowerCase() === 'email' ? 'email' :
                     user.userField.type.toLowerCase() === 'cep' ? 'text' :
-                    user.userField.type.toLowerCase() === 'phone' ? 'number' :
+                    user.userField.type.toLowerCase() === 'phone' ? 'text' :
                     'text';
 
     const changeValue = (value, id) => {
+        let valueMasked;
         if (id.toLowerCase() === 'cep') {
-            let valueMasked = addCefMask(value);
+            valueMasked = addCefMask(value);
             document.getElementById(id).value = valueMasked;
         }
+
+        if (id.toLowerCase() === 'phone') {
+            valueMasked = addCelMask(value);
+            document.getElementById(id).value = valueMasked;
+        }
+
     }
     
     window.changeValue = changeValue;
