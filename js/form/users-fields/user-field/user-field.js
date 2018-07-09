@@ -7,6 +7,10 @@ export default function renderUserField(user) {
                     user.userField.type.toLowerCase() === 'cep' ? 'text' :
                     user.userField.type.toLowerCase() === 'phone' ? 'text' :
                     'text';
+    
+    let minLength = user.userField.type.toLowerCase() === 'cep' ? '8' :
+                    user.userField.type.toLowerCase() === 'phone' ? '10':
+                    '5'
 
     const changeValue = (value, id) => {
         let valueMasked;
@@ -29,7 +33,7 @@ export default function renderUserField(user) {
         <div class="form__group">
             <label for="${user.userField.name}">${user.userField.label}</label>
             <input type="${inputType}" onkeyup="changeValue(this.value, this.id)" name="${user.userField.name}" id="${user.userField.name}"style="width: ${user.index === 0 || user.index === 3 ? '40%' : '100%'}"
-                class="form__input" placeholder="${user.userField.placeholder}" ${user.userField.required ? 'required' : ''}>
+                class="form__input" minlength="${minLength}" placeholder="${user.userField.placeholder}" ${user.userField.required ? 'required' : ''}>
             ${user.userField.required ? renderRequiredField() : ''}
         </div>
         `
