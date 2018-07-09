@@ -15,8 +15,17 @@ const createForm = (data) => {
     ];
 
     emitter.on(`searchProfessional`, (fieldData) => {
-        alert('Buscando profissionais...');
         let i, tabcontent, tablinks;
+
+        let form = document.getElementById(`myForm`);
+        var inputs = form.getElementsByTagName("select");
+
+        var formData = {};
+        for(var x=0; x< inputs.length; x++){
+            if (inputs[x].hasAttribute('required') == true && !inputs[x].value) return alert('Por favor, preencha os campos obrigatórios!');
+            formData[inputs[x].name] = inputs[x].value;
+        }
+        alert('Buscando profissionais...');
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].className = tabcontent[i].className.replace(" block", " none");
@@ -36,10 +45,12 @@ const createForm = (data) => {
     let form = (
         `
             <div id="request_fields" class="form__request block tabcontent">
-                ${renderRequestFields(data._embedded.request_fields)}
-                ${renderButtonSearch({
-                    message: `BUSCAR PROFISSIONAIS`, emitter: emitter, emitterName: `searchProfessional`, openFieldTab: `users_fields`, openFieldContent: `datas`
-                })}
+                <form id="myForm">
+                    ${renderRequestFields(data._embedded.request_fields)}
+                    ${renderButtonSearch({
+                        message: `BUSCAR PROFISSIONAIS`, emitter: emitter, emitterName: `searchProfessional`, openFieldTab: `users_fields`, openFieldContent: `datas`
+                    })}
+                </form>
             </div>
             <div id="users_fields" class="form__users none tabcontent">
                 ${renderUserFields(data._embedded.user_fields)}

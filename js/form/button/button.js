@@ -18,7 +18,8 @@ export function renderButtonFinished(options) {
 
 export function renderButtonSearch(options) {
 
-    const buttonSearch = () => {
+    const buttonSearch = (event) => {
+        event.preventDefault();
         options.emitter.emit(options.emitterName, {openFieldTab: options.openFieldTab, openFieldContent: options.openFieldContent});
     }
     
@@ -26,7 +27,7 @@ export function renderButtonSearch(options) {
 
     return (
         `
-            <button onClick="buttonSearch()">${options.message}</button>
+            <button onClick="buttonSearch(event)">${options.message}</button>
         `
     )
 }

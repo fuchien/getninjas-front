@@ -1,7 +1,6 @@
 import renderRequireField from '../../required-field/required-field';
 
 export default function createSelects(data) {
-    
     let options = data.selects.map(select =>
         `
             <option value="${select}">${select}</option>
@@ -9,7 +8,7 @@ export default function createSelects(data) {
     ).join('');
     return (
         `
-            <select class="form__select" required="${data.required}">
+            <select class="form__select" name="${data.name}" ${data.required ? 'required' : ''}>
                 <option value="" disabled selected>Selecione uma opção!</option>
                 ${options}
             </select>
