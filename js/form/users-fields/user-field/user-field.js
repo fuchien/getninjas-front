@@ -1,5 +1,5 @@
 import renderRequiredField from '../../required-field/required-field';
-import { addCefMask, addCelMask } from '../../form-mask/form-mask';
+import { addCepMask, addCelMask } from '../../form-mask/form-mask';
 
 export default function renderUserField(user) {
 
@@ -15,7 +15,7 @@ export default function renderUserField(user) {
     const changeValue = (value, id) => {
         let valueMasked;
         if (id.toLowerCase() === 'cep') {
-            valueMasked = addCefMask(value);
+            valueMasked = addCepMask(value);
             document.getElementById(id).value = valueMasked;
         }
 

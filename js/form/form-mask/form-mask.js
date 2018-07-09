@@ -1,6 +1,6 @@
 
 
-export function addCefMask(document) {
+export function addCepMask(document) {
     let valor = document.replace(/\D/g, '');
     if (valor.length == 0) {
         valor = '';
@@ -11,7 +11,6 @@ export function addCefMask(document) {
     } else {
         valor = valor.substr(0, 8).replace(/^(\d{0,5})(\d{0,3})/, '$1-$2');
     }
-    console.log(valor)
     return valor
 }
 
