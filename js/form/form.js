@@ -70,7 +70,7 @@ const createForm = (data) => {
                     })}
                 </form>
             </div>
-            <div class="form__tabs">${renderTabs(emitter, tabs)}</div>
+            <div class="form__tabs">${renderTabs(tabs)}</div>
         `
     )
 

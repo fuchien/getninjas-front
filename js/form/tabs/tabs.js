@@ -1,7 +1,7 @@
 import renderTab from './tab/tab';
 
 
-export default function renderTabs(emitter, tabs) {
+export default function renderTabs(tabs) {
     
     return tabs.map((tab, index) => 
         `
