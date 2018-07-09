@@ -17,7 +17,7 @@ If have `bundle.js`, to generate
 ---
     webpack --watch
 
-Then start a dev server on localhost:8000
+Then start a dev server on `localhost:8000`, but need to start [`server`](https://github.com/fuchien/getninjas-back)
 
 ---
     webpack-dev-server --port 8000
