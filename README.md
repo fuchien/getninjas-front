@@ -10,7 +10,7 @@ Utilization of `Vanilla.JS` e `css`
 First, be sure have `webpack`
 
 ---
-    npm run -g webpack webpack-cli webpack-dev-server
+    npm install -g webpack webpack-cli webpack-dev-server
 
 If have `bundle.js`, to generate
 
