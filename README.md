@@ -24,5 +24,12 @@ Then start a dev server on `localhost:8000`, but need to start [`server`](https:
 
 ## Running unit tests
 
+Be sure to install dependencies firstly with `npm``
+
+---
+    npm install
+
+and
+
 ---
     npm run test
